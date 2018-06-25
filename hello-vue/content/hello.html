@@ -4,14 +4,19 @@ date:
 ---
 
 <div id="app">
-    {{ message }}
+  {{ message }}
+
+  <div>
+    <span v-bind:title="hover_msg">Hover your mouse</span>
+  </div>
 </div>
 
 <script type="text/javascript">
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!',
+    hover_msg: 'You loaded thie page on' + new Date().toLocaleString()
   }
 })
 </script>
